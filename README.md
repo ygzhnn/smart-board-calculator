@@ -50,11 +50,8 @@ Future Improvements
 
 In future iterations, we plan to extend this application with additional features:
 
-    Multi-operation Support: Addition of more complex operations like multiplication, division, and more.
 
     Interactive Feedback: The app will be able to guide students through solving the problems by providing hints and suggestions.
-
-    Real-time Handwriting Recognition: Implementing a more advanced model for real-time recognition with a wider variety of mathematical expressions.
 
     Audio Assistance: Integration of text-to-speech to assist students with learning through auditory feedback.
     
