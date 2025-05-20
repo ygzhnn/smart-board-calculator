@@ -72,10 +72,4 @@ This application allows students to draw mathematical expressions (e.g., `6 + 2`
 - **Performance Improvements:** Optimize models for faster inference and better accuracy.
 
 ---
-
-**Contributors:**
-- [Your Name Here]
-
-**License:**
-- [Specify License]
     
