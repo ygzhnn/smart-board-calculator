@@ -1,57 +1,81 @@
-Calculator Recognition Web App
+# Smart Board Calculator
 
-This project is a simple web application designed for elementary school students to recognize handwritten numbers and perform basic mathematical operations. The application provides an engaging and fun way for students to learn and check their math results.
-Overview
+A web application for recognizing and generating handwritten digits and basic mathematical expressions, designed for elementary school students. The project leverages deep learning models for digit recognition and generation, providing an interactive and educational experience.
 
-The app allows students to draw mathematical expressions (like 6 + 2) and get the result by clicking a button to check if the calculation is correct. The current version of the project focuses on recognizing and generating numbers. It includes the following functionality:
+---
 
-    Number Recognition: The app can recognize handwritten numbers.
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Setup & Installation](#setup--installation)
+- [Usage](#usage)
+- [Notebooks](#notebooks)
+- [Future Improvements](#future-improvements)
 
-    Number Generation: The app can generate numbers using a trained Generative Adversarial Network (GAN).
+---
 
-The project is designed for educational purposes, making math learning easier and more enjoyable.
-How It Works
+## Overview
+This application allows students to draw mathematical expressions (e.g., `6 + 2`) on a digital canvas. The app recognizes the handwritten digits and operators, evaluates the expression, and displays the result. It also includes a generative model to create synthetic digit images, making math learning engaging and fun.
 
-    Draw the Expression: The student draws a math expression, such as 6 + 2, using a drawing canvas.
+## Features
+- **Handwritten Digit Recognition:** Uses a trained CNN to recognize digits from user drawings.
+- **Digit Image Generation:** Employs a GAN-based generator to create new digit images.
+- **Interactive Web Interface:** Built with Streamlit for easy use in classrooms or at home.
+- **Educational Focus:** Designed to help students practice and verify math problems interactively.
 
-    Click the "Show Result" Button: After drawing, the student clicks the "Show Result" button to get the math expression and the result.
+## Project Structure
+- `main.py` — Streamlit web app for drawing, recognition, and result display.
+- `model.py` — Contains the CNN and GAN model definitions.
+- `train.py` — Training script for both digit recognition and generation models.
+- `requirements.txt` — List of required Python packages.
+- `DigitClassification.ipynb` — Jupyter notebook for digit classification experiments and training.
+- `DigitGeneration.ipynb` — Jupyter notebook for digit image generation experiments and training.
+- `test_image.png` — Example/test image for model evaluation.
 
-    Result and Image Generation: The app will show the result of the mathematical expression, and the corresponding image of the number will be generated using a generator model.
+## Setup & Installation
+1. **Clone the repository:**
+   ```bash
+   git clone <repo-url>
+   cd smart-board-calculator
+   ```
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Current Features
+## Usage
+1. **Train the models (optional):**
+   - Run `train.py` to train or retrain the digit recognition and generation models.
+   - Alternatively, use the provided Jupyter notebooks for step-by-step training and experimentation.
+2. **Start the web app:**
+   ```bash
+   streamlit run main.py
+   ```
+3. **Interact:**
+   - Draw a math expression on the canvas.
+   - Click the "Show Result" button to see the recognized expression and its result.
+   - View generated digit images for additional practice or visualization.
 
-    Handwritten Digit Recognition: Based on the trained CNN model.
+## Notebooks
+- **DigitClassification.ipynb:**
+  - Data loading, preprocessing, and CNN training for digit recognition.
+  - Includes code for dataset download (Kaggle), exploration, and evaluation.
+- **DigitGeneration.ipynb:**
+  - GAN-based digit image generation.
+  - Training and visualization of generated samples.
 
-    Image Generation: Using the trained Generator model (a GAN) to produce a visual representation of numbers.
+## Future Improvements
+- **Operator Recognition:** Extend recognition to include handwritten operators (+, -, ×, ÷).
+- **Step-by-Step Feedback:** Guide students through multi-step problems with hints.
+- **Audio Assistance:** Integrate text-to-speech for auditory feedback.
+- **Performance Improvements:** Optimize models for faster inference and better accuracy.
 
-Requirements
+---
 
-Before running this app, you will need to install the following dependencies:
+**Contributors:**
+- [Your Name Here]
 
-    Streamlit: A framework to create the web application.
-
-    PyTorch: For running the models.
-
-    TorchVision: For image transformations and model definitions.
-
-    PIL (Pillow): For image processing.
-
-    NumPy: For handling arrays.
-
-    Matplotlib: For displaying generated images.
-
-Installing Dependencies
-
-You can install all dependencies using the following command:
-
-pip install -r requirements.txt
-
-Future Improvements
-
-In future iterations, we plan to extend this application with additional features:
-
-
-    Interactive Feedback: The app will be able to guide students through solving the problems by providing hints and suggestions.
-
-    Audio Assistance: Integration of text-to-speech to assist students with learning through auditory feedback.
+**License:**
+- [Specify License]
     
